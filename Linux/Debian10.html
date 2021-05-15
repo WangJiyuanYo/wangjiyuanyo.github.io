@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Debian10(buster) | WANGJIYAUN</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="stylesheet" href="/img/logo.png">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <meta name="description" content="用心写代码，不辜负程序员之名">
+    
+    <link rel="preload" href="/assets/css/0.styles.f931473a.css" as="style"><link rel="preload" href="/assets/js/app.d4f4243e.js" as="script"><link rel="preload" href="/assets/js/5.934eb362.js" as="script"><link rel="preload" href="/assets/js/13.5e3c940c.js" as="script"><link rel="prefetch" href="/assets/js/10.614a84f7.js"><link rel="prefetch" href="/assets/js/11.a6f6c7e1.js"><link rel="prefetch" href="/assets/js/12.62a7672b.js"><link rel="prefetch" href="/assets/js/14.7ded249e.js"><link rel="prefetch" href="/assets/js/15.a1d3c3e8.js"><link rel="prefetch" href="/assets/js/16.e0003386.js"><link rel="prefetch" href="/assets/js/17.cdeed925.js"><link rel="prefetch" href="/assets/js/18.7579ee3c.js"><link rel="prefetch" href="/assets/js/19.9d3c72cc.js"><link rel="prefetch" href="/assets/js/2.b44b4809.js"><link rel="prefetch" href="/assets/js/20.c05479c1.js"><link rel="prefetch" href="/assets/js/21.7b69d5ed.js"><link rel="prefetch" href="/assets/js/22.2b6f275d.js"><link rel="prefetch" href="/assets/js/23.eff95628.js"><link rel="prefetch" href="/assets/js/24.843116fd.js"><link rel="prefetch" href="/assets/js/25.c9b746ad.js"><link rel="prefetch" href="/assets/js/26.af8959d8.js"><link rel="prefetch" href="/assets/js/27.21455f21.js"><link rel="prefetch" href="/assets/js/28.2fb41b15.js"><link rel="prefetch" href="/assets/js/3.5aefe87b.js"><link rel="prefetch" href="/assets/js/4.2e219475.js"><link rel="prefetch" href="/assets/js/6.1ccf8798.js"><link rel="prefetch" href="/assets/js/7.95649921.js"><link rel="prefetch" href="/assets/js/8.185adbc5.js"><link rel="prefetch" href="/assets/js/9.abe914e8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f931473a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="loading"><div><div class="loader"></div> <div class="text">正在加载中~</div></div></div> <div id="landlord" data-v-1c077c9b><div class="chat-box" data-v-1c077c9b></div> <audio id="mp3" controls="controls" controlsList="nodownload" hidden="hidden" data-v-1c077c9b><source type="audio/mp3" data-v-1c077c9b></audio> <div class="robot-box robot" data-v-f412ca4a data-v-1c077c9b><input type="text" placeholder="回车或点击发送和我聊天吧~" value="" data-v-f412ca4a> <div class="btn" data-v-f412ca4a>发送</div></div> <canvas id="live2d" width="280" height="250" class="live2d" data-v-1c077c9b></canvas></div> <div class="bg"></div> <div class="all-box"><div class="nav-box"><div class="search-nav"><div class="search-box" data-v-6597e726><input autofocus="autofocus" placeholder="搜索" value="" data-v-6597e726> <!----></div></div> <div class="nav"></div> </div> <div class="content-box"><div class="content"><div class="catalog-item-big"><div class="title">
+                    
+                </div> <div class="article-time">
+                    
+                </div></div> <div class="content__default"><h1 id="debian10-buster"><a href="#debian10-buster" class="header-anchor">#</a> Debian10(buster)</h1> <h2 id="_1-mysql-8-0-安装"><a href="#_1-mysql-8-0-安装" class="header-anchor">#</a> 1.MySQL 8.0 安装</h2> <p>1、官网下载mysql 官网地址：<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fdev.mysql.com%2Fdownloads%2Frepo%2Fapt%2F" target="_blank" rel="noopener noreferrer">https://dev.mysql.com/downloads/repo/apt/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>2、下载下来之后cd mysql*.deb文件夹中打开终端 sudo dpkg -i *.deb 弹出图形界面选择ok</p> <p>3、在终端中 sudo apt-get update</p> <p>4、sudo apt-get install mysql-server</p> <p>5、重启MySQL sudo systemctl restart mysql.service</p> <p>6、sudo mysql_secure_installation配置MySQL</p> <p>7、是否删除匿名用户</p> <p>Remove anonymous users? [Y/n]</p> <p>是否禁止root远程登录</p> <p>Disallow root login remotely? [Y/n]</p> <p>是否删除test数据库</p> <p>Remove test database and access to it? [Y/n]</p> <p>是否重新加载权限表</p> <p>Reload privilege tables now? [Y/n]</p> <p>8、登录mysql完事</p> <h2 id="_2-docker-的安装和部署"><a href="#_2-docker-的安装和部署" class="header-anchor">#</a> 2.Docker 的安装和部署</h2> <p>安装脚本</p> <div class="language- extra-class"><pre class="language-text"><code>curl -sSL https://get.daocloud.io/docker | sh
+</code></pre></div><p>更新 apt 包索引。</p> <div class="language- extra-class"><pre class="language-text"><code>$ sudo apt-get update
+</code></pre></div><p>安装 apt 依赖包，用于通过 HTTPS 来获取仓库。</p> <p>$ <strong>sudo</strong> <strong>apt-get install</strong> \</p> <div class="language- extra-class"><pre class="language-text"><code>  apt-transport-https \
+  ca-certificates \
+  curl \
+  gnupg2 \
+  software-properties-common
+</code></pre></div><h2 id="_3-开启ssh远程登录"><a href="#_3-开启ssh远程登录" class="header-anchor">#</a> 3.开启SSH远程登录</h2> <p>1.安装ssh服务
+sudo apt-get update #更新软件源
+sudo apt-get install ssh #安装
+2.修改sshd_config文件，命令为：vi /etc/ssh/sshd_config
+将#PasswordAuthentication no的注释去掉，并且将no修改为yes
+将#PermitRootLogin prohibit-password的注释去掉，将prohibit-password改为yes
+PasswordAuthentication yes
+PermitRootLogin yes
+3.启动SSH服务，命令为：/etc/init.d/ssh start // 或者service ssh start
+4.验证SSH服务状态，命令为：/etc/init.d/ssh status</p> <ol start="5"><li>添加开机自启动 update-rc.d ssh enable</li></ol> <h2 id="_4-获取docker相关镜像"><a href="#_4-获取docker相关镜像" class="header-anchor">#</a> 4.获取Docker相关镜像</h2> <h3 id="拉取denian10镜像"><a href="#拉取denian10镜像" class="header-anchor">#</a> 拉取Denian10镜像</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>docker pull debian:10
+</code></pre></div><h3 id="拉取成功-查看下载的镜像"><a href="#拉取成功-查看下载的镜像" class="header-anchor">#</a> <strong>拉取成功，查看下载的镜像</strong></h3> <div class="language-shell extra-class"><pre class="language-shell"><code>docker images
+</code></pre></div><h3 id="aliyun镜像加速"><a href="#aliyun镜像加速" class="header-anchor">#</a> Aliyun镜像加速</h3> <p>https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</p> <p>对于使用 systemd 的系统，请在 /etc/docker/daemon.json 中写入如下内容（如果文件不存在请新建该文件）：</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;registry-mirrors&quot;:[&quot;https://332attgo.mirror.aliyuncs.com&quot;]}
+</code></pre></div><p>之后重新启动服务：</p> <div class="language-bash extra-class"><pre class="language-bash"><code>$ **sudo** systemctl daemon-reload
+$ **sudo** systemctl restart docker
+</code></pre></div><h3 id="docker版本mysql"><a href="#docker版本mysql" class="header-anchor">#</a> Docker版本MySQL</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查找Mysql images</span>
+docker search mysql
+<span class="token comment"># pull images</span>
+docker pull mysql:8.0
+<span class="token comment"># 查看是否成功</span>
+docker images mysql:8.0
+<span class="token comment"># 运行镜像</span>
+<span class="token variable"><span class="token variable">`</span>docker run -p <span class="token number">3307</span>:3306 --name mysql8.0 -e <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span>root -d mysql:8.0<span class="token variable">`</span></span>
+备注：
+-p 将本地主机的端口映射到docker容器端口（因为本机的3306端口已被其它版本占用，所以使用3307）
+--name 容器名称命名
+-e 配置信息，配置root密码
+-d 镜像名称
+<span class="token comment"># 查看mysql8.0容器运行情况</span>
+docker <span class="token function">ps</span>
+<span class="token comment"># docker登录mysql</span>
+docker <span class="token builtin class-name">exec</span> -it mysql8.0 <span class="token function">bash</span>
+mysql -uroot -p
+
+</code></pre></div></div> <!----> <!----> <div class="over">
+            完
+            <div class="block"></div></div> <div id="gitalk-container"></div></div> <div class="catalog "><!----> <div class="level1"></div> <a href="#_1-mysql-8-0-安装" nofollow class="level2">1.MySQL 8.0 安装</a><a href="#_2-docker-的安装和部署" nofollow class="level2">2.Docker 的安装和部署</a><a href="#_3-开启ssh远程登录" nofollow class="level2">3.开启SSH远程登录</a><a href="#_4-获取docker相关镜像" nofollow class="level2">4.获取Docker相关镜像</a><a href="#拉取denian10镜像" nofollow class="level3">拉取Denian10镜像</a><a href="#拉取成功-查看下载的镜像" nofollow class="level3">拉取成功，查看下载的镜像</a><a href="#aliyun镜像加速" nofollow class="level3">Aliyun镜像加速</a><a href="#docker版本mysql" nofollow class="level3">Docker版本MySQL</a> <!----></div> <!----></div></div> <div class="foot"> 粤ICP备案号：18150247号</div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d4f4243e.js" defer></script><script src="/assets/js/5.934eb362.js" defer></script><script src="/assets/js/13.5e3c940c.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Boot入门 | WANGJIYAUN</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="stylesheet" href="/img/logo.png">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <meta name="description" content="用心写代码，不辜负程序员之名">
+    
+    <link rel="preload" href="/assets/css/0.styles.f931473a.css" as="style"><link rel="preload" href="/assets/js/app.d4f4243e.js" as="script"><link rel="preload" href="/assets/js/5.934eb362.js" as="script"><link rel="preload" href="/assets/js/23.eff95628.js" as="script"><link rel="prefetch" href="/assets/js/10.614a84f7.js"><link rel="prefetch" href="/assets/js/11.a6f6c7e1.js"><link rel="prefetch" href="/assets/js/12.62a7672b.js"><link rel="prefetch" href="/assets/js/13.5e3c940c.js"><link rel="prefetch" href="/assets/js/14.7ded249e.js"><link rel="prefetch" href="/assets/js/15.a1d3c3e8.js"><link rel="prefetch" href="/assets/js/16.e0003386.js"><link rel="prefetch" href="/assets/js/17.cdeed925.js"><link rel="prefetch" href="/assets/js/18.7579ee3c.js"><link rel="prefetch" href="/assets/js/19.9d3c72cc.js"><link rel="prefetch" href="/assets/js/2.b44b4809.js"><link rel="prefetch" href="/assets/js/20.c05479c1.js"><link rel="prefetch" href="/assets/js/21.7b69d5ed.js"><link rel="prefetch" href="/assets/js/22.2b6f275d.js"><link rel="prefetch" href="/assets/js/24.843116fd.js"><link rel="prefetch" href="/assets/js/25.c9b746ad.js"><link rel="prefetch" href="/assets/js/26.af8959d8.js"><link rel="prefetch" href="/assets/js/27.21455f21.js"><link rel="prefetch" href="/assets/js/28.2fb41b15.js"><link rel="prefetch" href="/assets/js/3.5aefe87b.js"><link rel="prefetch" href="/assets/js/4.2e219475.js"><link rel="prefetch" href="/assets/js/6.1ccf8798.js"><link rel="prefetch" href="/assets/js/7.95649921.js"><link rel="prefetch" href="/assets/js/8.185adbc5.js"><link rel="prefetch" href="/assets/js/9.abe914e8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f931473a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="loading"><div><div class="loader"></div> <div class="text">正在加载中~</div></div></div> <div id="landlord" data-v-1c077c9b><div class="chat-box" data-v-1c077c9b></div> <audio id="mp3" controls="controls" controlsList="nodownload" hidden="hidden" data-v-1c077c9b><source type="audio/mp3" data-v-1c077c9b></audio> <div class="robot-box robot" data-v-f412ca4a data-v-1c077c9b><input type="text" placeholder="回车或点击发送和我聊天吧~" value="" data-v-f412ca4a> <div class="btn" data-v-f412ca4a>发送</div></div> <canvas id="live2d" width="280" height="250" class="live2d" data-v-1c077c9b></canvas></div> <div class="bg"></div> <div class="all-box"><div class="nav-box"><div class="search-nav"><div class="search-box" data-v-6597e726><input autofocus="autofocus" placeholder="搜索" value="" data-v-6597e726> <!----></div></div> <div class="nav"></div> </div> <div class="content-box"><div class="content"><div class="catalog-item-big"><div class="title">
+                    
+                </div> <div class="article-time">
+                    
+                </div></div> <div class="content__default"><h1 id="spring-boot入门"><a href="#spring-boot入门" class="header-anchor">#</a> Spring Boot入门</h1> <h2 id="_1-springboot简介"><a href="#_1-springboot简介" class="header-anchor">#</a> 1.SpringBoot简介</h2> <blockquote><p>简化SPring开发的一个框架；</p> <p>整合Spring技术栈的一个大集合</p> <p>J2EE开发的一站式解决方案</p></blockquote> <h2 id="微服务"><a href="#微服务" class="header-anchor">#</a> 微服务</h2> <p>微服务是一种架构风格</p> <p>一个应用应该是一组小型服务：可以通过HTTP的方式进行互通</p> <p>每一个功能元素最终都是一个可独立替换和升级的软件单元</p> <p><a href="https://www.martinfowler.com/articles/microservices.html" target="_blank" rel="noopener noreferrer">微服务文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h1 id="spring-boot-helloworld"><a href="#spring-boot-helloworld" class="header-anchor">#</a> Spring Boot HelloWorld</h1> <p>1.创建Maven 工程</p> <p>2.导入相关依赖</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>1.5.2.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>3.主程序启动SpringBoot</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@SpringBootApplication</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorldMainApplication</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//启动</span>
+        <span class="token class-name">SpringApplication</span><span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span><span class="token class-name">HelloWorldMainApplication</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>4编写相关的Controller、、、</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@ResponseBody</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">&quot;/hello&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;Hello World&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>5.运行主程序测试</p> <p>6.简化部署</p> <div class="language-xml extra-class"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>将这个应用打包成Jar包，直接使用-java -jar运行</p> <h1 id="springboot配置文件"><a href="#springboot配置文件" class="header-anchor">#</a> SpringBoot配置文件</h1> <p>​	SpringBoot使用一个全局配置文件</p> <p>​	application.properties</p> <p>​	application.yml</p> <p>作用：修改Spring Boot的默认值；</p> <p>YAML：一个标记语言</p> <p>标记语言：以前大多数配置文件都是 xxx.xml文件</p> <p>以数据为中心，比Json\xml等更适合做配置文件</p> <h3 id="_1-三种配置方式"><a href="#_1-三种配置方式" class="header-anchor">#</a> 1.三种配置方式</h3> <p>xml配置方式：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>port</span><span class="token punctuation">&gt;</span></span>8081<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>port</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>application.properties配置方式</p> <div class="language-properties extra-class"><pre class="language-properties"><code><span class="token attr-name">server.port</span><span class="token punctuation">=</span><span class="token attr-value">8081</span>
+</code></pre></div><p>application.yml配置方式</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+</code></pre></div><h3 id="_2-yaml语法"><a href="#_2-yaml语法" class="header-anchor">#</a> 2.YAML语法</h3> <h4 id="_1-基本语法"><a href="#_1-基本语法" class="header-anchor">#</a> 1.基本语法：</h4> <p>K: v：表示一对键值对(必须有空格)</p> <p>以<strong>空格</strong>的缩进来控制层级的关系；只要左对齐的一列数据，都是同一个层级的</p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  port<span class="token punctuation">:</span><span class="token number">8080</span>
+  path<span class="token punctuation">:</span>/hello
+</code></pre></div><p>属性和值大小写敏感</p> <h4 id="_2-值的写法字面量"><a href="#_2-值的写法字面量" class="header-anchor">#</a> 2.值的写法字面量</h4> <p><strong>（数字，字符串，布尔）</strong></p> <p>​		K:v：字面直接来写</p> <p>​					字符串默认不加单引号或双引号</p> <p>​					&quot;&quot;：双引号会转义字符串里面的特殊字符</p> <p>​							name:&quot;zhangsan \n lisi&quot; 输出：zhangsan 换行 lisi</p> <p>​					''：单引号不会转义特殊字符</p> <p>​							name:&quot;zhangsan \n lisi&quot; 输出：zhangsan \n lisi</p> <p><strong>对象，Map（属性和值）（键值对）</strong></p> <p>​	对象还是k:v的值</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">friends</span><span class="token punctuation">:</span>
+	lastname<span class="token punctuation">:</span>zhangsan
+	age<span class="token punctuation">:</span><span class="token number">20</span>
+</code></pre></div><p>行内写法</p> <div class="language- extra-class"><pre class="language-text"><code>friends:{lastName:zhangsan,age:20}
+</code></pre></div><p><strong>数组（List Set）</strong></p> <p>用值表示数组中的一个元素</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">pets</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> cat
+<span class="token punctuation">-</span> dog
+<span class="token punctuation">-</span> pig
+</code></pre></div><p>行内写法</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>pets<span class="token punctuation">:</span><span class="token punctuation">[</span>cat<span class="token punctuation">,</span>dog<span class="token punctuation">,</span>pig<span class="token punctuation">]</span>
+</code></pre></div><h4 id="_3-配置文件注入"><a href="#_3-配置文件注入" class="header-anchor">#</a> 3.配置文件注入</h4> <p>配置文件：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+
+<span class="token key atrule">person</span><span class="token punctuation">:</span>
+   <span class="token key atrule">lastName</span><span class="token punctuation">:</span> zhangsan
+   <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">18</span>
+   <span class="token key atrule">boss</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+   <span class="token key atrule">birth</span><span class="token punctuation">:</span> 2017/12/12
+   <span class="token key atrule">maps</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">k1</span><span class="token punctuation">:</span> v1<span class="token punctuation">,</span><span class="token key atrule">k2</span><span class="token punctuation">:</span> v2<span class="token punctuation">}</span>
+   <span class="token key atrule">lists</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> lisi
+     <span class="token punctuation">-</span> zhaoliu
+   <span class="token key atrule">dog</span><span class="token punctuation">:</span>
+     <span class="token key atrule">name</span><span class="token punctuation">:</span> 小狗
+     <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">2</span>
+</code></pre></div><p>JavaBean:</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;person&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    
+     <span class="token comment">/**
+      * @description: 把每一个属性的值映射到组件中
+      */</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> lastName<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> boss<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Date</span> birth<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span> <span class="token punctuation">,</span><span class="token class-name">Object</span> <span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span>lists<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Dog</span> dog<span class="token punctuation">;</span>
+
+</code></pre></div><p>我们可以导入配置文件处理器。以后编写配置文件就有提示了</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-configuration-processor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="两种注解的比较"><a href="#两种注解的比较" class="header-anchor">#</a> 两种注解的比较</h4> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200816000153150.png" alt="image-20200816000153150"></p> <h1 id="propertysource-importresource"><a href="#propertysource-importresource" class="header-anchor">#</a> @PropertySource&amp;@ImportResource</h1> <p>@PropertySource：加载指定的配置文件</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200816225818485.png" alt="image-20200816225818485"></p> <p>@ImportResource：导入Spring的配置文件，让配置文件内的内容生效</p> <p>SpringBoot里面没有Spring的配置文件。我们自己写的配置文件，也不能自动识别</p> <p>想让Spring的配置文件生效，加载进来；<strong>@ImportResource</strong>标注在一个<strong>配置类</strong>上</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200816230827053.png" alt="image-20200816230827053"></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200816230924331.png" alt="image-20200816230924331"></p> <p>SptringBoot推荐给容器中添加组建的方式：推荐使用全注解方式</p> <p>1.配置类====Spring配置文件</p> <p>2.使用@Bean给容器添加组件</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200816231834694.png" alt="image-20200816231834694"></p> <h1 id="配置文件占位符"><a href="#配置文件占位符" class="header-anchor">#</a> 配置文件占位符</h1> <h2 id="_1、随机数"><a href="#_1、随机数" class="header-anchor">#</a> 1、随机数</h2> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817113435140.png" alt="image-20200817113435140"></p> <h2 id="_2-占位符获取之前配置的值-如果没有可以设置默认值"><a href="#_2-占位符获取之前配置的值-如果没有可以设置默认值" class="header-anchor">#</a> 2.占位符获取之前配置的值，如果没有可以设置默认值</h2> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817113548183.png" alt="image-20200817113548183"></p> <h1 id="profile"><a href="#profile" class="header-anchor">#</a> Profile</h1> <h2 id="_1-多profile文件"><a href="#_1-多profile文件" class="header-anchor">#</a> 1.多Profile文件</h2> <p>我们在配置文件编写的时候，文件名可以是<strong>application-{profile}.properties/yml</strong></p> <p>默认使用application.properties</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817114905310.png" alt="image-20200817114905310"></p> <h2 id="_2-yml支持多文档块方式"><a href="#_2-yml支持多文档块方式" class="header-anchor">#</a> 2.yml支持多文档块方式</h2> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817115454532.png" alt="image-20200817115454532"></p> <h2 id="_3-激活指定profile"><a href="#_3-激活指定profile" class="header-anchor">#</a> 3.激活指定Profile</h2> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817114925425.png" alt="image-20200817114925425"></p> <p>1.在配置文件中指定 spring.profiles.cative=dev</p> <p>2.命令行:</p> <p>​	<strong>--spring.profiles.active=dev</strong></p> <p>打包后的命令行</p> <p><strong>java -jar spring-boot-02-config-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod</strong></p> <p>可以直接在测试时，传入命令行参数</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817115817429.png" alt="image-20200817115817429"></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817120220370.png" alt="image-20200817120220370"></p> <p>3.虚拟机参数</p> <p><strong>-Dspring.profiles.active=dev</strong></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817120505331.png" alt="image-20200817120505331"></p> <h1 id="配置文件加载位置-优先级"><a href="#配置文件加载位置-优先级" class="header-anchor">#</a> 配置文件加载位置（优先级）</h1> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817171214218.png" alt="image-20200817171214218"></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200818175136302.png" alt="image-20200818175136302"></p> <p>优先级由高到低，高优先级配置会覆盖低优先级的配置；</p> <p>SpringBoot会从这四个位置全部加载主配置文件：<strong>互补配置</strong></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817171943050.png" alt="image-20200817171943050"></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817172015097.png" alt="image-20200817172015097">、</p> <p>==我们还可以通过spring.config.location来改变默认的配置文件位置==</p> <p>项目打包后，可以使用命令行参数的形式，启动项目的时候来指定配置文件的新位置；指定配置文件和默认加载的这些配置文件共同起作用形成互补配置</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200817172748534.png" alt="image-20200817172748534"></p> <h1 id="自动配置原理"><a href="#自动配置原理" class="header-anchor">#</a> 自动配置原理</h1> <p><strong>自动配置原理</strong></p> <p>1）SpringBoot启动的时候加载主配置类，开启了自动配置功能**@EnableAutoConfiguration**</p> <p>2)@EnableAutoConfiguration作用：</p> <p>​								利用EnableAutoConfigurationImportSelector给容器中导入一些组件？</p> <p>​							     可以插件selectImports()的内容 获取候选的配置</p> <div class="language-java extra-class"><pre class="language-java"><code> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> configurations <span class="token operator">=</span> <span class="token class-name">SpringFactoriesLoader</span><span class="token punctuation">.</span><span class="token function">loadFactoryNames</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getSpringFactoriesLoaderFactoryClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getBeanClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>将类路径下META/INF/spring.factories里面所用EnableAutoConfigration的值加入到容器中</p> <div class="language-properties extra-class"><pre class="language-properties"><code><span class="token comment"># Auto Configure</span>
+<span class="token attr-name">org.springframework.boot.autoconfigure.EnableAutoConfiguration</span><span class="token punctuation">=</span><span class="token attr-value">\
+org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
+org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration,\
+org.springframework.boot.autoconfigure.batch.BatchAutoConfiguration,\
+org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration,\
+org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,\
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration,\
+org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration,\
+org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration,\
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration,\
+org.springframework.boot.autoconfigure.couchbase.CouchbaseAutoConfiguration,\
+org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.couchbase.CouchbaseDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.couchbase.CouchbaseReactiveDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.couchbase.CouchbaseReactiveRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.couchbase.CouchbaseRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRestClientAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.jdbc.JdbcRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.ldap.LdapRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.mongo.MongoReactiveDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.mongo.MongoReactiveRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.mongo.MongoRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.neo4j.Neo4jRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.solr.SolrRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.r2dbc.R2dbcDataAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.r2dbc.R2dbcRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.r2dbc.R2dbcTransactionManagerAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.redis.RedisReactiveAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration,\
+org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration,\
+org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration,\
+org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration,\
+org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration,\
+org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration,\
+org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration,\
+org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration,\
+org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration,\
+org.springframework.boot.autoconfigure.hazelcast.HazelcastAutoConfiguration,\
+org.springframework.boot.autoconfigure.hazelcast.HazelcastJpaDependencyAutoConfiguration,\
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration,\
+org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration,\
+org.springframework.boot.autoconfigure.influx.InfluxDbAutoConfiguration,\
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration,\
+org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration,\
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration,\
+org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,\
+org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration,\
+org.springframework.boot.autoconfigure.jdbc.JndiDataSourceAutoConfiguration,\
+org.springframework.boot.autoconfigure.jdbc.XADataSourceAutoConfiguration,\
+org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration,\
+org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration,\
+org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration,\
+org.springframework.boot.autoconfigure.jms.JndiConnectionFactoryAutoConfiguration,\
+org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration,\
+org.springframework.boot.autoconfigure.jms.artemis.ArtemisAutoConfiguration,\
+org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration,\
+org.springframework.boot.autoconfigure.jooq.JooqAutoConfiguration,\
+org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration,\
+org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration,\
+org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration,\
+org.springframework.boot.autoconfigure.ldap.embedded.EmbeddedLdapAutoConfiguration,\
+org.springframework.boot.autoconfigure.ldap.LdapAutoConfiguration,\
+org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration,\
+org.springframework.boot.autoconfigure.mail.MailSenderAutoConfiguration,\
+org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration,\
+org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration,\
+org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration,\
+org.springframework.boot.autoconfigure.mongo.MongoReactiveAutoConfiguration,\
+org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration,\
+org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration,\
+org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration,\
+org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration,\
+org.springframework.boot.autoconfigure.rsocket.RSocketMessagingAutoConfiguration,\
+org.springframework.boot.autoconfigure.rsocket.RSocketRequesterAutoConfiguration,\
+org.springframework.boot.autoconfigure.rsocket.RSocketServerAutoConfiguration,\
+org.springframework.boot.autoconfigure.rsocket.RSocketStrategiesAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.rsocket.RSocketSecurityAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.saml2.Saml2RelyingPartyAutoConfiguration,\
+org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration,\
+org.springframework.boot.autoconfigure.session.SessionAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration,\
+org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration,\
+org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration,\
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration,\
+org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration,\
+org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration,\
+org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration,\
+org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration,\
+org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.HttpHandlerAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.reactive.function.client.WebClientAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration,\
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration,\
+org.springframework.boot.autoconfigure.websocket.reactive.WebSocketReactiveAutoConfiguration,\
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration,\
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketMessagingAutoConfiguration,\
+org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration,\
+org.springframework.boot.autoconfigure.webservices.client.WebServiceTemplateAutoConfiguration</span>
+</code></pre></div><p>3)每一个这样的类：xxxAutoConfigration类都是容器中的一个组件；都加入到容器中；用他们来做自动配置</p> <p>4)以<strong>HttpEncodingAutoConfiguration</strong>为例解释自动配置原理</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Configuration</span><span class="token punctuation">(</span>
+    proxyBeanMethods <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token punctuation">)</span>   <span class="token comment">//表示这是一个配置类，和配置文件一样，向容器中添加组件</span>
+<span class="token annotation punctuation">@EnableConfigurationProperties</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">ServerProperties</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">//启动指定的ConfigurationProperties功能；将配置文件中对应的值和HttpEncodingProperties绑定起来；并把HttpEncodingProperties加入到IOC容器中</span>
+<span class="token annotation punctuation">@ConditionalOnWebApplication</span><span class="token punctuation">(</span>  <span class="token comment">//Spring底层@Conditional注解，根据不同的条件，如果满足指定的条件，整个配置类里面的配置就会生效；  判断当前应用是否是web应用，如果是当前配置类生效。</span>
+    type <span class="token operator">=</span> <span class="token class-name">Type</span><span class="token punctuation">.</span>SERVLET
+<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@ConditionalOnClass</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token class-name">CharacterEncodingFilter</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">//判断当前项目是否存在这个类CharacterEncodingFilter；SpringMVC中进行乱码解决的过滤器</span>
+
+<span class="token annotation punctuation">@ConditionalOnProperty</span><span class="token punctuation">(</span> <span class="token comment">//判断配置文件中是否存在某个配置server.servlet.encoding.enable;如果不存在也为true；</span>
+    <span class="token comment">//即使不配置为true也默认为生效</span>
+    prefix <span class="token operator">=</span> <span class="token string">&quot;server.servlet.encoding&quot;</span><span class="token punctuation">,</span>
+    value <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;enabled&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    matchIfMissing <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">)</span>
+
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HttpEncodingAutoConfiguration</span> <span class="token punctuation">{</span>
+    
+    <span class="token comment">//他已经和springBoot的配置文件映射</span>
+    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">Encoding</span> properties<span class="token punctuation">;</span>
+    <span class="token comment">//只有一个油藏构造器的情况下，参数的值从容器中拿</span>
+    <span class="token keyword">public</span> <span class="token class-name">HttpEncodingAutoConfiguration</span><span class="token punctuation">(</span><span class="token class-name">ServerProperties</span> properties<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>properties <span class="token operator">=</span> properties<span class="token punctuation">.</span><span class="token function">getServlet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getEncoding</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    
+    <span class="token annotation punctuation">@Bean</span> <span class="token comment">//给容器中添加一个组件；这个组件的某些值需要从properties中获取</span>
+    <span class="token annotation punctuation">@ConditionalOnMissingBean</span>
+    <span class="token keyword">public</span> <span class="token class-name">CharacterEncodingFilter</span> <span class="token function">characterEncodingFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">CharacterEncodingFilter</span> filter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OrderedCharacterEncodingFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        filter<span class="token punctuation">.</span><span class="token function">setEncoding</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>properties<span class="token punctuation">.</span><span class="token function">getCharset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        filter<span class="token punctuation">.</span><span class="token function">setForceRequestEncoding</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>properties<span class="token punctuation">.</span><span class="token function">shouldForce</span><span class="token punctuation">(</span><span class="token class-name"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>server<span class="token punctuation">.</span></span>Encoding<span class="token punctuation">.</span>Type</span><span class="token punctuation">.</span>REQUEST<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        filter<span class="token punctuation">.</span><span class="token function">setForceResponseEncoding</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>properties<span class="token punctuation">.</span><span class="token function">shouldForce</span><span class="token punctuation">(</span><span class="token class-name"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>server<span class="token punctuation">.</span></span>Encoding<span class="token punctuation">.</span>Type</span><span class="token punctuation">.</span>RESPONSE<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> filter<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>根据当前不同的条件判断，决定这个配置类是否生效</p> <p>一旦这个配置类生效；这个配置类就会给容器中添加各种组件；这些组件的属性是从对应的properties类中获取的，这些类里面的每一个属性又是和配置文件绑定的；</p> <p>5）所有配置文件中能配置的属性都是在xxxProperties类中的封装者；配置文件将能配置什么就可以参照某个功能对应的这个属性类</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>   <span class="token comment">//从配置文件中获取指定的值和Bean的属性进行绑定</span>
+    prefix <span class="token operator">=</span> <span class="token string">&quot;server&quot;</span><span class="token punctuation">,</span>
+    ignoreUnknownFields <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">)</span>
+</code></pre></div><p><strong>精髓：</strong></p> <p>​		<strong>1）SpringBoot启动会加载大量的自动配置类</strong></p> <p>​		<strong>2）我们看我们需要的功能有没有SpringBoot默认写好的自动配置类</strong></p> <p>​		<strong>3）我们在看这个自动配置类中到底配置了那些组件（只要我们要用到的组件有，我们就不需要再来配置类）</strong></p> <p>​		<strong>4）给容器中自动配置类添加组件的时候，会从Properties类中获取某些属性。我们就可以在配置文件中指定这些属性</strong></p> <p>xxxAutoConfigurartion：自动配置类</p> <p>给容器中添加组件</p> <p>xxxProperties：封装配置文件中相关属性；</p> <h2 id="细节"><a href="#细节" class="header-anchor">#</a> <strong>细节</strong>：</h2> <p>@Conditional：条件为true则像容器中添加组件，配置里面的所有内容才生效</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200818190716900.png" alt="image-20200818190716900"></p> <p><strong>自动配置类必须在一定条件下才能生效</strong></p> <p>我们怎么知道那些自动配置类生效</p> <p>启动Debug=ture属性让控制台打印报告，我们就可以很方便的知道那些配置类生效</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200818191548079.png" alt="image-20200818191548079"></p> <h1 id="spring-boot与日志"><a href="#spring-boot与日志" class="header-anchor">#</a> Spring Boot与日志</h1> <h1 id="日志"><a href="#日志" class="header-anchor">#</a> 日志</h1> <h2 id="_1-日志框架"><a href="#_1-日志框架" class="header-anchor">#</a> 1.日志框架</h2> <p>底层是SpringBoot；底层是Spring框架，Spring框架默认用的是JCL</p> <p><strong>SpringBoot选用SLF4和logback</strong></p> <h2 id="_2-slfj的使用"><a href="#_2-slfj的使用" class="header-anchor">#</a> 2.SLFj的使用</h2> <h3 id="_1-如何在系统中使用slf4j"><a href="#_1-如何在系统中使用slf4j" class="header-anchor">#</a> 1.如何在系统中使用SLF4j</h3> <p>开发的时候，日志记录方法的调用，不应该来直接俄调用日志的实现类，而是调用日志抽象层的方法：</p> <p>给系统里面导入slf4j的Jar和logback的实现Jar</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span></span><span class="token class-name">Logger</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span></span><span class="token class-name">LoggerFactory</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Logger</span> logger <span class="token operator">=</span> <span class="token class-name">LoggerFactory</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token class-name">HelloWorld</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    logger<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;Hello World&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819230535396.png" alt="image-20200819230535396"></p> <p>每一个日志的实现框架都有自己的配置文件，使用slf4j以后**，配置文件还是做成日志实现框架自己本身的配置文件**</p> <h3 id="_2-依赖框架"><a href="#_2-依赖框架" class="header-anchor">#</a> 2.依赖框架</h3> <p>a（slf4j+logback）：Spring（commons-logging）Hibernate(jboss-logging)</p> <p>统一日志记录，即使是别的框架和我一起统一使用slf4j进行输出</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819231517927.png" alt="image-20200819231517927"></p> <p><strong>==如何让系统中所有的日志统一到dslf4j？</strong>==</p> <ol><li>==将系统中其他日志框架先排除出去：==</li> <li>==用中间包来替换原有的日志框架；==</li> <li>==导入slf4j其他的实现==</li></ol> <h2 id="_3-spring-boot日志关系"><a href="#_3-spring-boot日志关系" class="header-anchor">#</a> 3.Spring Boot日志关系</h2> <div class="language-xml extra-class"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>​		SpringBoot使用它来</p> <div class="language-xml extra-class"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-logging<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.3.3.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>compile<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819232853247.png" alt="image-20200819232853247"></p> <p>总结：</p> <p>1）SB底层也是使用slf4j+logback的记录方式进行日志记录</p> <ol start="2"><li><p>SB也把其他的日志都替换成了slf4j</p></li> <li><p>中间替换包</p></li></ol> <p>4）如果要引入其他框架，一定要把这个框架的默认依赖移除掉</p> <p>​			SP使用的是commons-logging</p> <p>SP能自动适配所有的日志，而且底层使用slf4j_logback的方式记录日志，引入其他框架的时候自动排出</p> <h2 id="_4-日志使用"><a href="#_4-日志使用" class="header-anchor">#</a> 4.日志使用；</h2> <h3 id="_1-默认配置"><a href="#_1-默认配置" class="header-anchor">#</a> 1.默认配置</h3> <p>​	SP默认配置好了日志；</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819235036010.png" alt="image-20200819235036010"></p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819235053431.png" alt="image-20200819235053431"></p> <h4 id="logging-file-name"><a href="#logging-file-name" class="header-anchor">#</a> Logging.file.name</h4> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819235804460.png" alt="image-20200819235804460"></p> <h4 id="logging-file-path"><a href="#logging-file-path" class="header-anchor">#</a> Logging.file.path</h4> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200819235712590.png" alt="image-20200819235712590"></p> <h4 id="logging-pattern-file-logging-pattern-console"><a href="#logging-pattern-file-logging-pattern-console" class="header-anchor">#</a> Logging.pattern.file  &amp; Logging.pattern.console</h4> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200820000418187.png" alt="image-20200820000418187"></p> <h1 id="四、web开发"><a href="#四、web开发" class="header-anchor">#</a> 四、Web开发</h1> <p>使用SB开发</p> <p>1）创建项目应用选中所需要的组件</p> <p>2）SB默认配置好场景，只需要在配置文件中指定少量配置就可以运行起来</p> <p>3）自己编写业务代码</p> <p>自动配置原理：</p> <h1 id="五、整合数据库"><a href="#五、整合数据库" class="header-anchor">#</a> 五、整合数据库</h1> <h2 id="_1-整合druid"><a href="#_1-整合druid" class="header-anchor">#</a> 1.整合Druid</h2> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20201004002500755.png" alt="image-20201004002500755"></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">datasource</span><span class="token punctuation">:</span>
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> root
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> root
+    <span class="token key atrule">url</span><span class="token punctuation">:</span> jdbc<span class="token punctuation">:</span>mysql<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>3306/plant
+    <span class="token key atrule">driver-class-name</span><span class="token punctuation">:</span> com.mysql.cj.jdbc.Driver
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> com.alibaba.druid.pool.DruidDataSource
+
+    <span class="token key atrule">initiaSize</span><span class="token punctuation">:</span> <span class="token number">5</span>
+    <span class="token key atrule">minIdle</span><span class="token punctuation">:</span> <span class="token number">5</span>
+    <span class="token key atrule">maxActive</span><span class="token punctuation">:</span> <span class="token number">20</span>
+    <span class="token key atrule">maxWait</span><span class="token punctuation">:</span> <span class="token number">60000</span>
+    <span class="token key atrule">timeBetweenEvictionRunsMillis</span><span class="token punctuation">:</span> <span class="token number">60000</span>
+    <span class="token key atrule">minEvictableIdleTimeMillis</span><span class="token punctuation">:</span> <span class="token number">300000</span>
+    <span class="token key atrule">validationQuery</span><span class="token punctuation">:</span> SELECT 1 FROM DUAL
+    <span class="token key atrule">testWhileIdle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">testOnBorrow</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">testOnReturn</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">poolPreparedStatements</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">filters</span><span class="token punctuation">:</span> stat<span class="token punctuation">,</span>wall<span class="token punctuation">,</span>log4j
+    <span class="token key atrule">MaxPoolPreparedStatementPerConnectionSize</span><span class="token punctuation">:</span> <span class="token number">20</span>
+    <span class="token key atrule">useGlobalDataSourceStat</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">ConnectionProperties</span><span class="token punctuation">:</span> druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+</code></pre></div><p>config/DruidConfig</p> <div class="language-java extra-class"><pre class="language-java"><code>
+<span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DruidConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">&quot;spring.datasource&quot;</span><span class="token punctuation">)</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">DataSource</span> <span class="token function">druid</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">DruidDataSource</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//配置监控</span>
+    <span class="token comment">//1. 管理后台的Servlet</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">ServletRegistrationBean</span> <span class="token function">statViewServlet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">ServletRegistrationBean</span> bean <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServletRegistrationBean</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">StatViewServlet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;/druid/*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> initMaps <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        initMaps<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;loginUsername&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        initMaps<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;loginPassword&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 不写允许所有</span>
+        initMaps<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;allow&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        bean<span class="token punctuation">.</span><span class="token function">setInitParameters</span><span class="token punctuation">(</span>initMaps<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> bean<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//2. 配置Filtter</span>
+    <span class="token keyword">public</span> <span class="token class-name">FilterRegistrationBean</span> <span class="token class-name">WebStatFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">FilterRegistrationBean</span> bean <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FilterRegistrationBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bean<span class="token punctuation">.</span><span class="token function">setFilter</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">WebStatFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">&gt;</span></span> initParams <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        initParams<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">&quot;exclusions&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;*.js,*.css,/druid/*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bean<span class="token punctuation">.</span><span class="token function">setInitParameters</span><span class="token punctuation">(</span>initParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        bean<span class="token punctuation">.</span><span class="token function">setUrlPatterns</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token string">&quot;/*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> bean<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_2-整合mybatis"><a href="#_2-整合mybatis" class="header-anchor">#</a> 2.整合Mybatis</h2> <h3 id="配置druid"><a href="#配置druid" class="header-anchor">#</a> 配置Druid</h3> <h3 id="配置mybatis驼峰命名"><a href="#配置mybatis驼峰命名" class="header-anchor">#</a> 配置MyBatis驼峰命名</h3> <p>路径在/config/MyBatisConfig</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@org.springframework.context.annotation.Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyBatisConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">ConfigurationCustomizer</span> <span class="token function">configurationCustomizer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">ConfigurationCustomizer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token annotation punctuation">@Override</span>
+            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">customize</span><span class="token punctuation">(</span><span class="token class-name">Configuration</span> configuration<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                configuration<span class="token punctuation">.</span><span class="token function">setMapUnderscoreToCamelCase</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><div class="language-Java extra-class"><pre class="language-java"><code>使用<span class="token class-name">MapperScan</span>批量扫描<span class="token class-name">Mapper</span>所有的接口
+<span class="token annotation punctuation">@MapperScan</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">&quot;com.atfuigu.springboot06mybatis.mapper&quot;</span><span class="token punctuation">)</span>
+</code></pre></div><p>xml文件使用驼峰命名</p> <div class="language-xml extra-class"><pre class="language-xml"><code>resources/mybatis/mybatis-config.xml
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>setting</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mapUnderscoreToCamelCase<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>settings</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <!----> <!----> <div class="over">
+            完
+            <div class="block"></div></div> <div id="gitalk-container"></div></div> <div class="catalog "><!----> <div class="level1"></div> <a href="#_1-springboot简介" nofollow class="level2">1.SpringBoot简介</a><a href="#微服务" nofollow class="level2">微服务</a><a href="#_1-三种配置方式" nofollow class="level3">1.三种配置方式</a><a href="#_2-yaml语法" nofollow class="level3">2.YAML语法</a><a href="#_1、随机数" nofollow class="level2">1、随机数</a><a href="#_2-占位符获取之前配置的值-如果没有可以设置默认值" nofollow class="level2">2.占位符获取之前配置的值，如果没有可以设置默认值</a><a href="#_1-多profile文件" nofollow class="level2">1.多Profile文件</a><a href="#_2-yml支持多文档块方式" nofollow class="level2">2.yml支持多文档块方式</a><a href="#_3-激活指定profile" nofollow class="level2">3.激活指定Profile</a><a href="#细节" nofollow class="level2">细节：</a><a href="#_1-日志框架" nofollow class="level2">1.日志框架</a><a href="#_2-slfj的使用" nofollow class="level2">2.SLFj的使用</a><a href="#_1-如何在系统中使用slf4j" nofollow class="level3">1.如何在系统中使用SLF4j</a><a href="#_2-依赖框架" nofollow class="level3">2.依赖框架</a><a href="#_3-spring-boot日志关系" nofollow class="level2">3.Spring Boot日志关系</a><a href="#_4-日志使用" nofollow class="level2">4.日志使用；</a><a href="#_1-默认配置" nofollow class="level3">1.默认配置</a><a href="#_1-整合druid" nofollow class="level2">1.整合Druid</a><a href="#_2-整合mybatis" nofollow class="level2">2.整合Mybatis</a><a href="#配置druid" nofollow class="level3">配置Druid</a><a href="#配置mybatis驼峰命名" nofollow class="level3">配置MyBatis驼峰命名</a> <!----></div> <!----></div></div> <div class="foot"> 粤ICP备案号：18150247号</div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d4f4243e.js" defer></script><script src="/assets/js/5.934eb362.js" defer></script><script src="/assets/js/23.eff95628.js" defer></script>
+  </body>
+</html>

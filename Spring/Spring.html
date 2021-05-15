@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring 基础 | WANGJIYAUN</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="stylesheet" href="/img/logo.png">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <meta name="description" content="用心写代码，不辜负程序员之名">
+    
+    <link rel="preload" href="/assets/css/0.styles.f931473a.css" as="style"><link rel="preload" href="/assets/js/app.d4f4243e.js" as="script"><link rel="preload" href="/assets/js/2.b44b4809.js" as="script"><link rel="preload" href="/assets/js/22.2b6f275d.js" as="script"><link rel="prefetch" href="/assets/js/10.614a84f7.js"><link rel="prefetch" href="/assets/js/11.a6f6c7e1.js"><link rel="prefetch" href="/assets/js/12.62a7672b.js"><link rel="prefetch" href="/assets/js/13.5e3c940c.js"><link rel="prefetch" href="/assets/js/14.7ded249e.js"><link rel="prefetch" href="/assets/js/15.a1d3c3e8.js"><link rel="prefetch" href="/assets/js/16.e0003386.js"><link rel="prefetch" href="/assets/js/17.cdeed925.js"><link rel="prefetch" href="/assets/js/18.7579ee3c.js"><link rel="prefetch" href="/assets/js/19.9d3c72cc.js"><link rel="prefetch" href="/assets/js/20.c05479c1.js"><link rel="prefetch" href="/assets/js/21.7b69d5ed.js"><link rel="prefetch" href="/assets/js/23.eff95628.js"><link rel="prefetch" href="/assets/js/24.843116fd.js"><link rel="prefetch" href="/assets/js/25.c9b746ad.js"><link rel="prefetch" href="/assets/js/26.af8959d8.js"><link rel="prefetch" href="/assets/js/27.21455f21.js"><link rel="prefetch" href="/assets/js/28.2fb41b15.js"><link rel="prefetch" href="/assets/js/3.5aefe87b.js"><link rel="prefetch" href="/assets/js/4.2e219475.js"><link rel="prefetch" href="/assets/js/5.934eb362.js"><link rel="prefetch" href="/assets/js/6.1ccf8798.js"><link rel="prefetch" href="/assets/js/7.95649921.js"><link rel="prefetch" href="/assets/js/8.185adbc5.js"><link rel="prefetch" href="/assets/js/9.abe914e8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f931473a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="loading"><div><div class="loader"></div> <div class="text">正在加载中~</div></div></div> <div id="landlord" data-v-1c077c9b><div class="chat-box" data-v-1c077c9b></div> <audio id="mp3" controls="controls" controlsList="nodownload" hidden="hidden" data-v-1c077c9b><source type="audio/mp3" data-v-1c077c9b></audio> <div class="robot-box robot" data-v-f412ca4a data-v-1c077c9b><input type="text" placeholder="回车或点击发送和我聊天吧~" value="" data-v-f412ca4a> <div class="btn" data-v-f412ca4a>发送</div></div> <canvas id="live2d" width="280" height="250" class="live2d" data-v-1c077c9b></canvas></div> <div class="bg"></div> <div class="index-box" data-v-82e3e2fc><div class="nav-box" data-v-0bc0d532 data-v-82e3e2fc><div class="search-nav"><div class="search-box" data-v-6597e726><input autofocus="autofocus" placeholder="搜索" value="" data-v-6597e726> <!----></div></div> <div class="nav"></div> <div class="info-box" data-v-0bc0d532><img src="https://yating.online/res/img/yating.jpg" class="my-phone" data-v-0bc0d532> <div class="info" data-v-0bc0d532><div data-v-0bc0d532><div class="my-name" data-v-0bc0d532>WANGJIYUAN</div> <div class="des" data-v-0bc0d532>用心写代码，不辜负程序员之名</div></div></div></div></div> <div class="box" data-v-69b40e18 data-v-82e3e2fc><div class="tag-box" data-v-69b40e18><div class="tag-item" data-v-69b40e18><div class="tag-name" data-v-69b40e18>全部</div> <div class="tag-num" data-v-69b40e18>0</div></div> </div></div> <div class="content-box" data-v-82e3e2fc><div class="content"><div class="catalog-item-big"><div class="title">
+                    
+                </div> <div class="article-time">
+                    
+                </div></div> <div class="content__default"><h2 id="官网"><a href="#官网" class="header-anchor">#</a> 官网：</h2> <blockquote><p>Spring.io</p></blockquote> <h2 id="spring-是什么"><a href="#spring-是什么" class="header-anchor">#</a> Spring 是什么：</h2> <blockquote><p>Spring是分层的Java SE/EE应用<font color="red">full-stack</font>轻量级开源框架</p></blockquote> <h2 id="spring的两大核心"><a href="#spring的两大核心" class="header-anchor">#</a> Spring的两大核心：</h2> <p><font color="red">IOC（反转控制）</font></p> <blockquote><p><font color="red">削减耦合</font>，降低依赖关系(把创建对象的权力交给框架或者工厂)</p></blockquote> <p><font color="red">AOP（面向切面编程）</font>为内核，提供展现层Spring MVC和持久层Spring JDBC以及业务层事务管理等众多的企业级应用技术。</p> <h2 id="创建bean的三种方式"><a href="#创建bean的三种方式" class="header-anchor">#</a> 创建Bean的三种方式</h2> <p>创建Bean的三种方式:</p> <p>第一种方式：使用默认构造函数创建。
+在Spring的配置文件中使用Bean标签，配以ID和CLASS属性之后，且没有其他属性和标签时
+采用的就是默认构造函数创建Bean对象，此时如果类中没有构造函数，则对象无法创建</p> <div class="language-xml extra-class"><pre class="language-xml"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.service.impl.AccountServiceImpl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>第二种方式：使用普通工厂中的方法创建对象（使用某个类中的方法创建对象，并存入Spring容器）</p> <div class="language-xml extra-class"><pre class="language-xml"><code>     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>instanceFactory<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.factory.InstanceFactory<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">factory-bean</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>instanceFactory<span class="token punctuation">&quot;</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>getAccountService<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>第三种方法： 使用工厂中的静态方法创建对象，(使用某个类中的静态方法创建对象，并存入Spring容器)</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.factory.StaticFactory<span class="token punctuation">&quot;</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>getAccountService<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="bean的作用范围"><a href="#bean的作用范围" class="header-anchor">#</a> Bean的作用范围</h2> <p>Bean标签的Scope属性:</p> <div class="language- extra-class"><pre class="language-text"><code>作用：用于指定Bean的作用范围
+取值：
+singleton : 单例的（默认值）
+prototype :多例的
+request   :作用域Web应用的请求范围
+session   :作用域Web应用的会话范围
+global-session：作用域集群环境的会话范围（全局会话范围），不是集群环境时，他就是Session
+</code></pre></div><div class="language-xml extra-class"><pre class="language-xml"><code> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.factory.StaticFactory<span class="token punctuation">&quot;</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>getAccountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">scope</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>prototype<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h1 id="bean对象的生命周期"><a href="#bean对象的生命周期" class="header-anchor">#</a> Bean对象的生命周期</h1> <div class="language- extra-class"><pre class="language-text"><code>单例对象：
+    出生：容器创建出生
+    活着：只要容器在，对象一直存活
+    死亡：容器消失，对象消亡
+    总结：单例对象的生命周期和容器相同
+多例对象：
+    出生：使用对象时，Spring创建
+    活着：对象在使用过程中，一直活着
+    死亡：当对象长时间不用，且没有其他对象引用时由Java垃圾回收机制回收；
+</code></pre></div><h1 id="spring的依赖注入"><a href="#spring的依赖注入" class="header-anchor">#</a> Spring的依赖注入</h1> <ol><li><p>Spring中的依赖注入 Dependency Injection
+IOC的作用：降低耦合（依赖关系）
+依赖关系的管理：以后交给Spring维护
+在当前类需要用到其他类的对象，由Spring为我们提供。我们只需要在配置文件中   说明</p></li> <li><p>依赖关系的维护：    就称之为依赖注入
+依赖注入：</p> <blockquote><p>​    能注入的数据：有三类
+​    		1.基本类型和String</p> <p>​			2.其他的Bean类型</p> <p>​			3.复杂类型/集合类型</p> <p>注入的方式有三种：</p> <p>​	       1.第一种：使用构造函数提供</p> <p>​			2.第二种：使用set方法提供</p> <p>​			3.第三种：使用注解提供</p></blockquote></li></ol> <h2 id="构造函数注入"><a href="#构造函数注入" class="header-anchor">#</a> 构造函数注入：</h2> <p>第一种：构造函数注入
+constructor-arg 在Bean标签的内部使用</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>属性：</p> <blockquote><p>type：用于指定要注入的数据的数据类型
+index：用于指定要注入的数据给构造函数的索引位置
+name:用于指定给构造函数中指定名称的参数赋值</p></blockquote> <p><font color="red">以上三个用于指定给构造函数中哪个参数赋值</font></p> <hr> <blockquote><p>value:用于提供基本类型过和String类型的数据</p> <p>ref  : 用于指定其他的Bean类型数据。在Spring的IOC核心容器中出现过的Bean对象</p></blockquote> <p>总结：</p> <blockquote><p>优势：
+在获Bean对象时，注入是必须的操作，否则无法创建成功
+弊端：
+该拜年了Bean对象的实例化方式，使我们在创建对象时，如果用不到这些数据也必须提供</p></blockquote> <div class="language-xml extra-class"><pre class="language-xml"><code>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.service.impl.AccountServiceImpl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>泰斯特<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>age<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>18<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>constructor-arg</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>birthday<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>now<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>constructor-arg</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--    配置一个日期--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>now<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>java.util.Date<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+
+</code></pre></div><h2 id="set注入"><a href="#set注入" class="header-anchor">#</a> Set注入</h2> <p>涉及的标签：property</p> <p>出现的位置：Bean标签的内部</p> <p>标签的属性：</p> <blockquote><p>name:用于指定注入时所调用的set方法名称；</p> <p>value:用于提供基本类型过和String类型的数据</p> <p>ref  : 用于指定其他的Bean类型数据。在Spring的IOC核心容器中出现过的Bean对象</p></blockquote> <p>总结：</p> <blockquote><p>优势：</p> <p>​		创建时有明确的限制，可以直接使用默认构造函数</p> <p>弊端：</p> <p>​		如果有某个成员必须有值，则获取对象有可能Set方法没有执行</p></blockquote> <div class="language-xml extra-class"><pre class="language-xml"><code>    <span class="token comment">&lt;!--    Set 注入--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService2<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.service.impl.AccountServiceImpl2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>特斯拉<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>age<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>21<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>birthday<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>now<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h2 id="复杂类型的注入"><a href="#复杂类型的注入" class="header-anchor">#</a> 复杂类型的注入</h2> <p>用于给List集合注入的标签：list array set</p> <p>用于给Map结构集合注入的标签：map props</p> <p>结构相同，标签可以互换</p> <h1 id="注解"><a href="#注解" class="header-anchor">#</a> 注解：</h1> <p>XML文件配置：</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.service.impl.AccountServiceImpl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+* 用于创建对象过的注解
+	在XML配置文件中编写一个<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span><span class="token punctuation">&gt;</span></span>表爱去哪实现功能是一样的
+ 	@Component:
+        作用：把当前类对象存入Spring容器中
+        属性：value用于指定Bean的id。不写时默认值为当前类名，且首字母小写
+   @Controller	：用于表现层
+   @Service  	：用于业务层
+   @Respository	：用于持久层
+        以上三个注解，他们的作用和属性与Compontent是一模一样的，
+        是Spring框架为我们提供明确的三层使用的注解，是我们的三层对象更加清晰
+* 用于注入数据的        
+        在XML配置中的bean中写一个<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">&gt;</span></span>标签一样
+   @Autowired:
+        作用：自动按照类型注入，只要容器中有唯一的一个Bean对象类型和要注入的变量类型匹配，就可以注入成功；
+        	  如果IOC容器中没有任何Bean的类型和要注入的变量类型匹配，则报错
+        	  如果有多个类型匹配时
+        出现位置：可以是变量上，可以是方法上
+        细节：在使用注解时,set方法就可以不用
+   @Qualified：必须依赖于Autowired
+        作用：在按按照而理性注入的基础上再按照名称注入。它在给类成员注入时不能单独使用；但给参数注入时可以
+		   属性：value：用于指定注入bean的ID
+   @Resource
+        作用：直接按照bean的ID注入，可以单独使用
+        属性：
+        	  name:用于指定bean的ID
+  		 以上三个注解，只能注入其他Bean类型的术后据，而基本类型和String类型无法使用上述注解实现。
+        另外，类型集合的注入只能通过XML实现
+        
+        
+   @Value：
+        作用：用于注入基本类型和String类型
+        属性：value：用于指定数据的值，可以使用Spring中SpEL（Spring中的el表达式）
+        	 SpEL写法：${表达式}
+* 改变作用范围的
+        作用集合在bean标签中使用scop标签是一样的
+   @Scope 
+        作用：用于指定Bean的作用范围
+        属性：
+        	Value：指定范围的取值，Singleton、Prototype
+* 生命周期相关（了解）
+        作用和bean标签中使用init-method,destroy-method
+   @PreDestroy：
+       	指定销毁方法
+  @ PostContruct：
+        指定初始化方法
+        	
+</code></pre></div><h1 id="configration注解"><a href="#configration注解" class="header-anchor">#</a> Configration注解：</h1> <div class="language-xml extra-class"><pre class="language-xml"><code>@Configuration	
+	作用：
+		指定当前类是一个配置类
+	细节：
+		1.当配置类作为AnnotationCondifApplicationContext对象创建时，该注解可不写
+		2.
+@ComponentsScan：
+	作用：
+		用于指定Spring创建容器时所需要扫描的包
+	属性：
+		value:它和basePackkages的作用是一样的，都是指定窗户将容器时所要扫描的包
+			  此注解等同与在XML中配置了<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">context:</span>component-scan</span> <span class="token attr-name">base-package</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">context:</span>component-scan</span><span class="token punctuation">&gt;</span></span>
+@Bean:
+	作用：
+		把当前方法的返回值作为Bean对象存入Spring容器中
+	属性：
+		naem:用于指定bean的ID，不写诗，默认值为当前方法的名称
+	细节：
+		当使用注解配置方法时，如果方法有参数，Spring框架会去容器中查找有没有可用的Bean对象，查找的方式和Autowied一致
+@Import
+	作用：用于导入其它的配置类
+	属性：
+		value:用于指定其他配置类的字节码
+			  放我们使用Import注释的是父配置类，而导入的是子配置类
+@PropertySource :
+		作用：用于指定Peoperties文件的位置
+属性：values:指定文件路径和名册和名称
+		关键字classpath
+</code></pre></div><h1 id="spring-test注解"><a href="#spring-test注解" class="header-anchor">#</a> Spring Test注解</h1> <div class="language-java extra-class"><pre class="language-java"><code>
+
+<span class="token annotation punctuation">@Runwith</span>
+		<span class="token operator">:</span>提供一个注解，把原有的main方法替换了，替换成<span class="token class-name">Spring</span>提供的
+
+<span class="token annotation punctuation">@ContextConfigration</span>
+		：location：指定xml位置，加上<span class="token keyword">class</span> path关键字，表示在类路径下（<span class="token annotation punctuation">@ContextConfiguration</span><span class="token punctuation">(</span>locations <span class="token operator">=</span> <span class="token string">&quot;classpath:bean.xml&quot;</span><span class="token punctuation">)</span>
+）
+		classes：指定注解类所在位置
+</code></pre></div><h1 id="aop"><a href="#aop" class="header-anchor">#</a> AOP</h1> <h2 id="实例分析"><a href="#实例分析" class="header-anchor">#</a> 实例分析：</h2> <p>解决多个进程问题，无法回滚</p> <h2 id="动态代理对象"><a href="#动态代理对象" class="header-anchor">#</a> 动态代理对象</h2> <h3 id="demo-基于接口的动态代理"><a href="#demo-基于接口的动态代理" class="header-anchor">#</a> Demo:基于接口的动态代理</h3> <blockquote><div class="language- extra-class"><pre><code>  动态代理
+  
+  特点：字节码随用随创建、加载
+      不修改源码的基础上对方法进行增强
+  分类：
+  
+  		基于接口的动态代理
+  		基于子类的动态代理
+  	
+  		基于接口的动态代理：
+  				涉及的类Proxy
+  				提供者：JDK官方
+  		 如何创建代理对象：
+  				使用Proxy类中的 newProxyInstance
+  		 创建代理对象的要求：
+  				被代理类最少实现一个接口，如果没有则不能使用
+  		newProxyInstance方法的参数：
+  				ClassLoader : 用于加载对象字节码。和被代理对象使用相同的类加载器；固定写法
+  				Class[]：		 让代理对象和被代理对象有相同的方法。固定写法
+  				InvocationHandle：  让我们写如何代理，我们一般都是写一个该接口的实现类，通常情况下都是匿名内部类；但不是必须的
+  		 此接口的实现类都是谁用谁写
+</code></pre></div></blockquote> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200811222212008.png" alt="image-20200811222212008"></p> <h3 id="demo-基于子类的动态代理"><a href="#demo-基于子类的动态代理" class="header-anchor">#</a> Demo:基于子类的动态代理</h3> <blockquote><div class="language- extra-class"><pre><code>  动态代理
+  
+  特点：字节码随用随创建、加载
+      不修改源码的基础上对方法进行增强
+  分类：
+  
+  ​	基于接口的动态代理
+  ​	基于子类的动态代理
+  
+  基于子类的动态代理：
+  		 涉及的类:Enhancer
+  		提供者：第三方 cglib
+   如何创建代理对象：
+  		使用Proxy类中的 Ehancer类中的Create方法
+   创建代理对象的要求：
+  		被代理类不能是最终类
+  cerate方法的参数：
+  		Class：字节码，用于指定被代理对象的字节码
+  		Callback：  让我们写如何代理，我们一般都是写一个该接口的实现类，通常情况下都是匿名内部类；但不是必须的
+  ​	此接口的实现类都是谁用谁写
+  ​	我们一般写的都是该接口的子接口实现类:MethodInterceptor
+</code></pre></div></blockquote> <h2 id="aop概念及作用"><a href="#aop概念及作用" class="header-anchor">#</a> AOP概念及作用</h2> <p>AOP：面向切面编程，是OOP的延续，是函数式编程的延续</p> <p>作用：在程序运行期间，不修改源码对已有方法进行增强</p> <p>优势：</p> <p>​		减少重复代码</p> <p>​		提高开发效率</p> <p>​		维护方便</p> <h3 id="通知的类型"><a href="#通知的类型" class="header-anchor">#</a> 通知的类型：</h3> <h1 id="spring基于xml的aop配置步骤"><a href="#spring基于xml的aop配置步骤" class="header-anchor">#</a> Spring基于XML的AOP配置步骤</h1> <p>​    1.把通知的Bean交给Logger来管理
+​    2.使用AOP：config标签表示开始AOP的配置
+​    3.使用Aop：aspect标签表明配置切面：
+​            id属性：给切面提供一个唯一标志
+​            ref属性：指定通知类的Bean ID
+​     4.在aop:aspect内部使用对应标签来配置通知的类型
+​            aop:before 配置前置通知
+​                method属性：用于指定Logger类中哪个方法作为前置通知
+​                pointcut属性：用于指定切入点表达式。对业务层哪些方法进行增强</p> <p>​     切入点从表达式的写法：
+​     关键字：execution(表达式)
+​     表达式：访问修饰符 返回值 包名.包名.类名.方法名（参数列表）
+​     标准的表达式写法:public void com.itheima.service.impl.AccountServiceImpl.saveAccount()</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!--    配置Spring的IOC，把service对象配置进来--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>accountService<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.service.impl.AccountServiceImpl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!--    Spring基于XML的AOP配置步骤
+    1.把通知的Bean交给Logger来管理
+    2.使用AOP：config标签表示开始AOP的配置
+    3.使用Aop：aspect标签表明配置切面：
+            id属性：给切面提供一个唯一标志
+            ref属性：指定通知类的Bean ID
+     4.在aop:aspect内部使用对应标签来配置通知的类型
+            aop:before 配置前置通知
+                method属性：用于指定Logger类中哪个方法作为前置通知
+                pointcut属性：用于指定切入点表达式。对业务层哪些方法进行增强
+
+             切入点从表达式的写法：
+             关键字：execution(表达式)
+             表达式：访问修饰符 返回值 包名.包名.类名.方法名（参数列表）
+              标准的表达式写法:public void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+--&gt;</span>
+<span class="token comment">&lt;!--    配置Logger类--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>logger<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.utils.Logger<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--配置AOP--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>config</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--        配置切面--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>aspect</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>logAdvice<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>logger<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--            配置通知的类型并且建立通知方法和切入点方法的关联--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">aop:</span>before</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>printLog<span class="token punctuation">&quot;</span></span>
+                    <span class="token attr-name">pointcut</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution(public void com.itheima.service.impl.AccountServiceImpl.saveAccount())<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">aop:</span>before</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">aop:</span>aspect</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">aop:</span>config</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="通配表达式的写法"><a href="#通配表达式的写法" class="header-anchor">#</a> 通配表达式的写法</h3> <div class="language- extra-class"><pre><code>			切入点从表达式的写法：
+             关键字：execution(表达式)
+             表达式：访问修饰符 返回值 包名.包名.类名.方法名（参数列表）
+              标准的表达式写法:&lt;font color=red&gt;public void com.itheima.service.impl.AccountServiceImpl.saveAccount()&lt;/font&gt;
+                  访问修饰符可以省略：
+                        &lt;font color=red&gt;void com.itheima.service.impl.AccountServiceImpl.saveAccount()&lt;/font&gt;
+                  返回值可以使用*，表示任意返回值
+
+                    *   &lt;font color=red&gt;com.itheima.service.impl.AccountServiceImpl.saveAccount()&lt;/font&gt;
+                                      包名可以使用通配符，表示任意包，但是有几级包就需要写几个*.
+                                            
+                                           * *.*.*.*.AccountServiceImpl.saveAccount()
+                                                                  包名可以使用..表示当前包及其子包
+                                                                       * *..AccountServiceImpl.saveAccount();
+                                                                                         类名和方法名都可以使用*通配
+                                                                                     
+                                                                                                   * *..*.*()
+                                                                                                                参数列表：
+                                                可以直接写数据类型：
+                                            基本类型直接写名称 int
+                                                              应用类型写包名.类名方式 java.lang.String
+                                                                                                                                    可以使用通配符表示任意类型，但必须有参数，
+                                                                                                                          可以使用..表示有无参数均可，有参数可以是任意类型
+                                                                                  全通配写法：* *..*.*(..)
+</code></pre></div><p><font color="red">实际开发中通常写法：切到业务层实现类的所有方法:  </font></p> <p>​          <font color="red">  *  com.itheima.service.impl.<em>.</em>(..) </font></p> <h2 id="环绕通知的写法"><a href="#环绕通知的写法" class="header-anchor">#</a> 环绕通知的写法：</h2> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * 问题：
+ * 当配置了环绕通知后，切入点方法没有执行，而通知方法执行了
+ * 分析：
+ * 通过对比动态代理中的环绕通知代码，发现动态代理中的环绕通知有明确的切入点调用方法，而我们代码中没有
+ * 解决：
+ * Spring框架为我们提供一个接口：ProceedingJoinPoint，该接口有一个方法Proceed（）。此方法明确调用切入点方法
+ * 该接口可以作为环绕方法的通知参数，在程序执行时，Spring框架会为我们提供该接口方法的实现类供我们使用
+ *
+ * Spring环绕通知
+ *      他是Spring框架为我们提供的一种可以在代码中手动控制增强方法何时执行的方式
+ **/
+</code></pre></div><h2 id="注解通知"><a href="#注解通知" class="header-anchor">#</a> 注解通知：</h2> <h1 id="spring中基于xml的声明式事务控制配置"><a href="#spring中基于xml的声明式事务控制配置" class="header-anchor">#</a> Spring中基于XML的声明式事务控制配置</h1> <p>​        1.配置事务管理器
+​        2.配置事务的通知，需要约束,同时也需要AOP
+​                属性：</p> <p>​					 id 给事务通知一个标识
+​                     transaction-manager：给事务管理器通知提供一个事务管理器的引用
+​         3.配置AOP通用切入点表达式
+​         4.建立事务通知和表达式的关系
+​         5.配置事务的属性:
+​            是在事务通知的tx:advice标签内部
+​             isolation=&quot;&quot; : 用于指定事务的隔离界别，默认值default表示使用数据库的级别
+​             propagation=&quot;&quot; ：用于指定十五点额传播行为，默认值时REQUIRED，表示一定有事务，增删改的选择。查询方法可以选择			SUPPORT
+​             read-only=&quot;&quot;：用于指定事务是否支付，只有查询方法才能设置为True默认值为false，表示为可读写
+​             timeout=&quot;&quot;：事务的超时时间，默认值-1.永不超时；若指定了数值，以秒为单位
+​             rollback-for=&quot;&quot;：用于指定一个异常；但产生异常时；事务回滚；产生其它异常时，事务不回滚没有默认值。表示人任何异常都回			滚
+​             no-rollback-for=&quot;&quot; ：用于指定一个异常，但产生该异常时事务不回滚。产生其他异常时事务会回滚，没有默认值表示任何异常都			回滚</p> <p><img src="C:%5CUsers%5C79443%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200814224346045.png" alt="image-20200814224346045"></p> <h1 id="spring中基于aopl的声明式事务控制配置"><a href="#spring中基于aopl的声明式事务控制配置" class="header-anchor">#</a> Spring中基于AOPL的声明式事务控制配置</h1> <p>​        1.配置事务管理器
+​        2.开启Spring对注解事务的支持
+​        3.在需要事务支持的地方使用@Transactionz注解</p></div> <!----> <!----> <div class="over">
+            完
+            <div class="block"></div></div> <div id="gitalk-container"></div></div> <div class="catalog "><!----> <div class="level1"></div> <a href="#官网" nofollow class="level2">官网：</a><a href="#spring-是什么" nofollow class="level2">Spring 是什么：</a><a href="#spring的两大核心" nofollow class="level2">Spring的两大核心：</a><a href="#创建bean的三种方式" nofollow class="level2">创建Bean的三种方式</a><a href="#bean的作用范围" nofollow class="level2">Bean的作用范围</a><a href="#构造函数注入" nofollow class="level2">构造函数注入：</a><a href="#set注入" nofollow class="level2">Set注入</a><a href="#复杂类型的注入" nofollow class="level2">复杂类型的注入</a><a href="#实例分析" nofollow class="level2">实例分析：</a><a href="#动态代理对象" nofollow class="level2">动态代理对象</a><a href="#demo-基于接口的动态代理" nofollow class="level3">Demo:基于接口的动态代理</a><a href="#demo-基于子类的动态代理" nofollow class="level3">Demo:基于子类的动态代理</a><a href="#aop概念及作用" nofollow class="level2">AOP概念及作用</a><a href="#通知的类型" nofollow class="level3">通知的类型：</a><a href="#通配表达式的写法" nofollow class="level3">通配表达式的写法</a><a href="#环绕通知的写法" nofollow class="level2">环绕通知的写法：</a><a href="#注解通知" nofollow class="level2">注解通知：</a> <!----></div> <!----></div></div> <div class="foot"> 粤ICP备案号：18150247号</div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d4f4243e.js" defer></script><script src="/assets/js/2.b44b4809.js" defer></script><script src="/assets/js/22.2b6f275d.js" defer></script>
+  </body>
+</html>
